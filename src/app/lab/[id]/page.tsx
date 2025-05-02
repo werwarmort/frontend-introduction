@@ -1,31 +1,25 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
+import { useRouter, useParams } from 'next/navigation';
 import { labsHtml } from '@/shared/labs';
 import parse from 'html-react-parser';
 import styles from './LabPage.module.scss';
 import { useEffect, useState } from 'react';
 
-export default function LabPage({ params }: { params: { id: string } }) {
-  const labContent = labsHtml[params.id];
+export default function LabPage() {
   const router = useRouter();
+  const params = useParams();
+  const id = Array.isArray(params?.id) ? params.id[0] : params?.id;
+  const labContent = id && id in labsHtml ? labsHtml[id as keyof typeof labsHtml] : null;
 
   const [showScrollTopButton, setShowScrollTopButton] = useState(false);
 
-  const handleScroll = () => {
-    if (window.scrollY > 200) {
-      setShowScrollTopButton(true);
-    } else {
-      setShowScrollTopButton(false);
-    }
-  };
-
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
+    const handleScroll = () => {
+      setShowScrollTopButton(window.scrollY > 200);
     };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   if (!labContent) {
@@ -35,8 +29,8 @@ export default function LabPage({ params }: { params: { id: string } }) {
   const handleBackClick = () => {
     if (window.history.length > 1) {
       router.back();
-    } else {
-      router.push(`/lectures/${params.id}`);
+    } else if (id) {
+      router.push(`/lectures/${id}`);
     }
   };
 
