@@ -5,7 +5,7 @@ import { lecture_4 } from './lecture_4'
 import { lecture_5 } from './lecture_5'
 import { lecture_6 } from './lecture_6'
 import { lecture_7 } from './lecture_7'
-import { lecture_8 } from './8_lecture_architecture'
+import { lecture_8 } from './lecture_8'
 
 export const lecturesHtml = {
   '1': lecture_1,

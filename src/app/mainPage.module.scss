@@ -1,0 +1,33 @@
+.mainTitle {
+  text-align: center;
+}
+
+.lectureLi {
+  display: flex;
+  align-items: center;
+}
+
+.index, .lectureLink {
+  font-weight: 500;
+  font-size: 18px;
+  padding: 5px;
+  border: 1px solid white;
+  display: block;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.index {
+  width: 30px;
+  text-align: center;
+}
+
+.lectureLink {
+  width: 100%;
+  margin-left: 10px;
+  transition: .2s;
+
+  &:hover {
+    background: rgba(56, 56, 56, 0.74);
+  }
+}
