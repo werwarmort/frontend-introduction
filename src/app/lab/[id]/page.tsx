@@ -5,7 +5,6 @@ import { labsHtml } from '@/shared/labs';
 import parse from 'html-react-parser';
 import styles from './LabPage.module.scss';
 import { useEffect, useState } from 'react';
-
 export default function LabPage() {
   const router = useRouter();
   const params = useParams();
