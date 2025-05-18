@@ -4,6 +4,15 @@
     padding-left: 20px;
   }
 
+  pre {
+    margin: 10px 0;
+  }
+
+  a {
+    color: #57a2fa;
+    text-decoration: underline;
+  }
+
   ul li {
     font-size: 17px;
     margin-bottom: 12px;
@@ -93,8 +102,4 @@
 
 .scrollTopButton:hover {
   background-color: #0056b3;
-}
-
-pre {
-  margin: 10px 0;
 }
