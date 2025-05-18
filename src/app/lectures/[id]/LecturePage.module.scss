@@ -1,9 +1,32 @@
 .LecturePageWrapper {
 
+  h1 {
+    text-align: center;
+    border: 1px dashed white;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  h3 {
+    background: rgba(197, 197, 197, 0.34);
+    padding: 5px 10px;
+    margin: 5px 0;
+    border-radius: 15px;
+  }
+
   pre {
     margin: 20px 0;
     font-size: 20px;
     font-weight: bold;
+    background: rgba(54, 55, 56, 0.61);
+    padding-left: 30px;
+    border-radius: 10px;
+    border: 1px dashed white;
 
     code {
       color: rgba(1, 218, 253, 0.84);
@@ -30,8 +53,10 @@
   }
 
   ol {
-    padding-left: 20px;
     list-style-type: decimal;
+    border: 1px solid white;
+    padding: 20px 0 20px 30px;
+    border-radius: 15px;
   }
 
   h1 {
