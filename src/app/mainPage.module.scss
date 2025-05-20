@@ -1,5 +1,6 @@
 .mainTitle {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .lectureLi {
@@ -30,4 +31,21 @@
   &:hover {
     background: rgba(56, 56, 56, 0.74);
   }
+}
+
+.link, .questions {
+  margin: 0 auto;
+  display: inline;
+  border: 1px solid white;
+  width: 100%;
+  border-radius: 10px;
+  text-align: center;
+}
+
+
+.finalBlock {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }

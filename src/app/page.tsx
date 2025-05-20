@@ -6,7 +6,9 @@ import styles from './mainPage.module.scss';
 export default function HomePage() {
   return (
     <main>
-      <h1 className={styles.mainTitle}>Лекции</h1>
+      <h1 className={styles.mainTitle}>
+        Курс: Современные фронтенд-фреймворки, архитектура фронтенд-приложений
+      </h1>
       <ul>
         {lectures.map(({ id, title }) => (
           <li key={id} className={styles.lectureLi}>
@@ -29,6 +31,18 @@ export default function HomePage() {
           </li>
         ))}
       </ul>
+
+      <div className={styles.finalBlock}>
+        <a
+          className={styles.link}
+          href="https://distedu.vsau.ru/quest/preview/start/quest_id/28881/subject_id/9127/redirect_url/%252Fquest%252Fsubject%252Ftest%252Fsubject_id%252F9127"
+        >
+          ссылка на тест
+        </a>
+        <Link className={styles.questions} href="/questions">
+          вопросы
+        </Link>
+      </div>
     </main>
   );
 }
